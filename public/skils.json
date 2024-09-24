@@ -1,0 +1,30 @@
+[
+    {
+        "name": "Tailwind CSS",
+        "image": "https://i.ibb.co/nzbs469/tailwind.png"
+    },
+    {
+        "name": "React",
+        "image": "https://i.ibb.co/X8Rf424/react.png"
+    },
+    {
+        "name": "MongoDB",
+        "image": "https://i.ibb.co/SQFWxPL/mongoDB.png"
+    },
+    {
+        "name": "CSS",
+        "image": "https://i.ibb.co/z2kyJ49/css.png"
+    },
+    {
+        "name": "HTML",
+        "image": "https://i.ibb.co/JkCCvmw/html.png"
+    },
+    {
+        "name": "JavaScript",
+        "image": "https://i.ibb.co/SBs2Xn0/javascript.png"
+    },
+    {
+        "name": "Firebase",
+        "image": "https://i.ibb.co/P5mrr86/firebase.png"
+    }
+]
