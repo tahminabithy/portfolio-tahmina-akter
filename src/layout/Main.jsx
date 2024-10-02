@@ -1,6 +1,7 @@
 import React from 'react'
 import { Outlet } from 'react-router-dom'
 import Navigation from '../shared/Navigation/Navigation'
+import Footer from '../shared/Footer/Footer'
 
 export default function Main() {
 
@@ -8,6 +9,8 @@ export default function Main() {
         <div >
             <Navigation />
             <Outlet />
+
+            <Footer />
         </div>
     )
 }

@@ -1,0 +1,59 @@
+[
+    {
+        "name": "Blossom & Bliss",
+        "description": "Blossom & Bliss is a web application designed for a beauty and wellness parlour. It allows customers to browse services, book appointments, and make online payments.",
+        "tools": [
+            "React",
+            "Tailwind CSS",
+            "vite",
+            "Firebase",
+            "Express.js",
+            "MongoDb"
+        ],
+        "image": "https://i.ibb.co/7bNk9Fy/blossom.png",
+        "liveLink": "https://blossom-bliss-parlour.web.app/",
+        "gitLink": "https://github.com/tahminabithy/blossom-bliss-client"
+    },
+    {
+        "name": "Street-11",
+        "description": "Street11 is a modern web application designed for seamless online ordering and menu browsing.Users can explore various food categories, customize their orders, and place them online",
+        "tools": [
+            "React",
+            "vite",
+            "Tailwind CSS",
+            "Node.js",
+            "MongoDB",
+            "Express",
+            "Firebase"
+        ],
+        "image": "https://i.ibb.co/0ZCNptG/street.png",
+        "liveLink": "https://restaurant-street11.web.app/",
+        "gitLink": "https://github.com/tahminabithy/restaurant-website"
+    },
+    {
+        "name": "Dear Watch",
+        "description": "Dear Watch is a watch selling website where users can browse different watch collections, view details, and make purchases.",
+        "tools": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "MongoDB"
+        ],
+        "image": "https://i.ibb.co/0CfwF7T/Screenshot-2024-09-27-at-7-11-43-PM.png",
+        "liveLink": "https://dear-watch.web.app/",
+        "gitLink": "https://github.com/tahminabithy/Dear-watch"
+    },
+    {
+        "name": "Core Health Wellness Center",
+        "description": "A task management tool that allows users to create, update, and delete tasks with different statuses.",
+        "tools": [
+            "React",
+            "Firebase",
+            "Tailwind CSS",
+            "Node.js"
+        ],
+        "image": "https://i.ibb.co/J5F7n85/Screenshot-2024-09-27-at-7-20-35-PM.png",
+        "liveLink": "https://core-health-and-wellness.web.app/",
+        "gitLink": "https://github.com/tahminabithy/core-health-wellness-center"
+    }
+]

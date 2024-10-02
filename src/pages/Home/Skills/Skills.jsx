@@ -11,25 +11,25 @@ export default function Skills() {
 
     useEffect(() => {
         fetch('/skils.json').then(res => res.json()).then(data => {
-            console.log(data);
+
             setSkills(data);
         })
     }, [])
     return (
         <div className='mt-12 md:mt-20'>
             <div className='text-center'>
-                <Heading title='Skills' />
+                <Heading title='I Work With...' />
             </div>
 
             {/* infinite loop slider */}
-            <div className='my-12 '>
+            <div className='my-12 lg:my-24'>
                 <Marquee className='py-12' pauseOnHover={true} speed={70}>
                     {
                         skills.map((skill, index) => (
-                            <div key={index} className='overflow-hidden flex justify-center items-center bg-skillColor mx-8 shadow-2xl shadow-custom-shadow rounded-2xl w-52 p-2 transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110  duration-300'>
+                            <div key={index} className='overflow-hidden flex justify-center items-center bg-lightColor dark:bg-skillColor mx-8 shadow-2xl shadow-custom-shadow rounded-2xl w-52 p-2 transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110  duration-300'>
                                 <div className='px-10 py-8 transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110  duration-300'> {/* Increase padding */}
                                     <img className='h-20 w-20 object-contain' src={skill.image} alt={skill.name} />
-                                    <p className='text-center text-xl font-bold mt-4'>{skill.name}</p>
+                                    <p className='text-center text-xl font-bold mt-4 text-dark dark:text-white'>{skill.name}</p>
                                 </div>
                             </div>
                         ))

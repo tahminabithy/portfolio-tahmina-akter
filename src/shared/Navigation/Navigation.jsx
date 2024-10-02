@@ -13,16 +13,30 @@ export default function Navigation() {
             setTheme('dark')
         }
     }
+    // useEffect(() => {
+    //     localStorage.setItem('theme', theme)
+    //     const localTheme = localStorage.getItem('theme');
+    //     document.querySelector('html').setAttribute('data-theme', localTheme);
+    // }, [theme])
     useEffect(() => {
-        localStorage.setItem('theme', theme)
+        localStorage.setItem('theme', theme);
         const localTheme = localStorage.getItem('theme');
-        document.querySelector('html').setAttribute('data-theme', localTheme);
-    }, [theme])
+        const htmlElement = document.querySelector('html');
+
+        // DaisyUI still uses 'data-theme' for specific themes, but Tailwind uses the 'dark' class
+        if (localTheme === 'dark') {
+            htmlElement.classList.add('dark');
+            htmlElement.setAttribute('data-theme', 'dark'); // Optional for DaisyUI theme
+        } else {
+            htmlElement.classList.remove('dark');
+            htmlElement.setAttribute('data-theme', 'light'); // Optional for DaisyUI theme
+        }
+    }, [theme]);
     const navOptions = (
         <>
             <li className='hover: active:bg-violet-700 focus:outline-none'><Link to="/">Home</Link></li>
             <li ><Link to="/projects">Projects</Link></li>
-            <li><Link to="/">About</Link></li>
+            <li><Link to="/about">About</Link></li>
             <li><Link to="/">Contact</Link></li>
             <li><label className="swap swap-rotate">
                 {/* this hidden checkbox controls the state */}
@@ -39,7 +53,7 @@ export default function Navigation() {
         </>
     )
     return (
-        <div className="navbar md:py-4 ">
+        <div className="navbar py-4 md:py-10 px-4 md:px-14 lg:px-24">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -63,10 +77,10 @@ export default function Navigation() {
                         {navOptions}
                     </ul>
                 </div>
-                <a className="btn btn-ghost text-3xl text-style text-baseColor">Tahmina Akter</a>
+                <a className="btn btn-ghost text-4xl text-style text-baseColor">Tahmina Akter</a>
             </div>
-            <div className="navbar-end hidden lg:flex ">
-                <ul className="menu menu-horizontal  text-lg">
+            <div className="navbar-end hidden lg:flex">
+                <ul className="menu menu-horizontal  text-2xl lg:space-x-4">
                     {navOptions}
                 </ul>
             </div>
