@@ -19,7 +19,6 @@ export default function Home() {
     return (
         <div className=''>
             <Banner />
-
             <Experience />
             <Skills />
 
@@ -29,7 +28,7 @@ export default function Home() {
                     <Heading title='Projects' />
                 </div>
                 {projects?.length > 0 ? (
-                    projects.slice(0, 3).map((project, index) => (
+                    projects.slice(0, 2).map((project, index) => (
                         <Project key={index} project={project} index={index} />
 
                     ))

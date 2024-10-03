@@ -26,5 +26,9 @@
     {
         "name": "Firebase",
         "image": "https://i.ibb.co/P5mrr86/firebase.png"
+    },
+    {
+        "name": "Java",
+        "image": "https://raw.githubusercontent.com/hhhrrrttt222111/developer-portfolio/fbb3b053a617abb946a36abb4af574182e57f4a2/src/assets/svg/skills/java.svg"
     }
 ]
