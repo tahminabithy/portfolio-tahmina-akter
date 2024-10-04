@@ -1,7 +1,14 @@
 import React from 'react'
 import profile from '../../../assets/profile2.jpg'
+import { useTranslation } from 'react-i18next';
+import i18n from '../../../i18n';
 
 export default function Banner() {
+    const { t } = useTranslation();
+
+    const changeLanguage = (lang) => {
+        i18n.changeLanguage(lang);
+    };
     return (
         <div className='min-h-full flex items-center justify-center bg-lightColor dark:bg-skillColor'>
             <div className='text-center py-16 lg:py-32'>
@@ -17,25 +24,35 @@ export default function Banner() {
 
                 {/* Text Section */}
                 <h1 className='text-5xl md:text-7xl font-extrabold tracking-widest text-gray-900 dark:text-white mt-12 md:mt-24 mb-8 animate-fadeIn'>
-                    Hi! I'm Tahmina
+                    {t('greeting')}
                 </h1>
                 <p className='text-2xl md:text-3xl text-baseColor font-semibold tracking-wide mb-4 animate-fadeIn delay-500'>
-                    Web Developer
+                    {t('title')}
                 </p>
                 <p className='text-lg md:text-xl leading-relaxed tracking-wide text-gray-700 dark:text-gray-300 mb-8 animate-fadeIn delay-700'>
-                    I specialize in building exceptional digital experiences.
+                    {t('description')}
                 </p>
 
                 {/* Buttons Section */}
                 <div className='flex flex-col md:flex-row justify-center items-center gap-6 mt-12 animate-fadeIn delay-1000'>
                     <button className='border-2 border-baseColor text-baseColor py-3 px-8 rounded-md hover:bg-baseColor hover:text-white transition duration-300 ease-in-out shadow-md'>
-                        Get in Touch
+                        {t('getInTouch')}
                     </button>
                     <button className='bg-baseColor text-white py-3 px-8 rounded-md border-2 border-baseColor hover:bg-white hover:text-baseColor transition duration-300 ease-in-out shadow-md'>
-                        Download Resume
+                        {t('downloadResume')}
+                    </button>
+                </div>
+                <div className='mt-6 md:mt-20'>
+                    <button onClick={() => changeLanguage('en')} className="mr-2">
+                        <img className='w-12 h-6 object-cover' src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Flag_of_the_United_Kingdom_%281-2%29.svg" alt="English" />
+                    </button>
+                    <button onClick={() => changeLanguage('fr')}>
+                        <img className='w-12 h-6 object-cover ml-4' src="https://m.media-amazon.com/images/I/51KX3rkD-LL._AC_UF894,1000_QL80_.jpg" alt="french" />
                     </button>
                 </div>
             </div>
+            {/* ------------ */}
+
         </div>
     )
 }

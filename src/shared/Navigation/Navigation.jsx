@@ -37,7 +37,7 @@ export default function Navigation() {
             <li className='hover: active:bg-violet-700 focus:outline-none'><Link to="/">Home</Link></li>
             <li ><Link to="/projects">Projects</Link></li>
             <li><Link to="/about">About</Link></li>
-            <li><Link to="/">Contact</Link></li>
+            <li><Link to="/contact">Contact</Link></li>
             <li><label className="swap swap-rotate">
                 {/* this hidden checkbox controls the state */}
                 <input onChange={handleToggle} checked={theme === "dark" ? false : true} type="checkbox" />

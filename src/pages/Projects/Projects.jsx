@@ -1,23 +1,16 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Heading from '../../Components/Heading/Heading';
 import Project from '../../Components/Project/Project';
+import { useTranslation } from 'react-i18next';
 
 
 export default function Projects() {
-    const [projects, setProjects] = useState([]);
-
-    useEffect(() => {
-        fetch('/projects.json')
-            .then(res => res.json())
-            .then(data => {
-                setProjects(data);
-            });
-    }, []);
-
+    const [t] = useTranslation();
+    const projects = t('projects.project', { returnObjects: true })
     return (
         <div className='my-12 p-4 animate-fadeIn'>
             <div className='mb-12 lg:mb-24 text-center'>
-                <Heading title='Latest Projects' />
+                <Heading title={t('projects.title')} />
             </div>
 
             {projects?.length > 0 ? (
@@ -32,13 +25,3 @@ export default function Projects() {
     );
 
 }
-
-
-{/* <p className='mt-4 text-pink-500 text-3xl'>Technologies Used:  {
-                                    project.tools.map((tool, index) => (
-                                        <ul key={index}>
-
-                                            <li className='text-white text-lg'>{tool}</li>
-                                        </ul>
-                                    ))
-                                }</p> */}

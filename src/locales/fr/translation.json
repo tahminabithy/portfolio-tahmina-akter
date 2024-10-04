@@ -1,0 +1,151 @@
+{
+  "greeting": "Bonjour! Je suis Tahmina",
+  "title": "Développeur Web",
+  "description": "Je me spécialise dans la création d'expériences numériques exceptionnelles.",
+  "getInTouch": "Entrer en contact",
+  "downloadResume": "Télécharger le CV",
+  "skill-title": "Je travaille avec...",
+  "copyright": "droit d'auteur",
+  "footer-text": "Tous droits réservés par Tahmina Akter",
+  "about": {
+    "title": "À propos de moi",
+    "description": "Je suis un développeur Web passionné avec un fort intérêt pour la création de sites Web réactifs et conviviaux. es frameworks modernes.",
+    "experience": "Mon objectif est de créer des sites Web hautes performances qui résolvent des problèmes du monde réel et offrent des expériences utilisateur exceptionnelles. Je suis toujours désireux d'explorer de nouvelles technologies et d'améliorer continuellement mes compétences."
+  },
+  "hobbies": {
+    "title": "loisirs",
+    "description": "Ma passion pour la photographie et les voyages m'inspire à capturer divers paysages, cultures et émotions."
+  },
+  "experience": {
+    "title": "Expérience",
+    "work": [
+      {
+        "company": "Ally Bank",
+        "title": "Représentant Financier",
+        "years": "2023 - 2024",
+        "mainTech": [
+          "React",
+          "Tailwind CSS",
+          "Firebase"
+        ],
+        "technologies": [
+          "TypeScript",
+          "GitHub Actions",
+          "API REST"
+        ]
+      },
+      {
+        "company": "Tecognize Solution",
+        "title": "Développeur Frontend",
+        "years": "2022 - 2023",
+        "mainTech": [
+          "React",
+          "Tailwind CSS",
+          "Firebase"
+        ],
+        "technologies": [
+          "TypeScript",
+          "GitHub Actions",
+          "API REST"
+        ]
+      },
+      {
+        "company": "Inflexion Point BD",
+        "title": "Stagiaire Ingénieur Logiciel",
+        "years": "2021 - 2022",
+        "mainTech": [
+          "React",
+          "Tailwind CSS"
+        ],
+        "technologies": [
+          "JavaScript",
+          "Git",
+          "Intégration API"
+        ]
+      }
+    ]
+  },
+  "projects": {
+    "title": "Projets",
+    "project-btn": "Voir Tout",
+    "project": [
+      {
+        "name": "Blossom & Bliss",
+        "description": "Blossom & Bliss est une application web conçue pour un salon de beauté et de bien-être. Elle permet aux clients de consulter les services, de prendre des rendez-vous et de payer en ligne.",
+        "tools": [
+          "React",
+          "Tailwind CSS",
+          "vite",
+          "Firebase",
+          "Express.js",
+          "MongoDb"
+        ],
+        "image": "https://i.ibb.co/7bNk9Fy/blossom.png",
+        "liveLink": "https://blossom-bliss-parlour.web.app/",
+        "gitLink": "https://github.com/tahminabithy/blossom-bliss-client"
+      },
+      {
+        "name": "Street-11",
+        "description": "Street11 est une application web moderne conçue pour la commande en ligne et la consultation du menu. Les utilisateurs peuvent explorer différentes catégories de plats, personnaliser leurs commandes et les passer en ligne.",
+        "tools": [
+          "React",
+          "vite",
+          "Tailwind CSS",
+          "Node.js",
+          "MongoDB",
+          "Express",
+          "Firebase"
+        ],
+        "image": "https://i.ibb.co/0ZCNptG/street.png",
+        "liveLink": "https://restaurant-street11.web.app/",
+        "gitLink": "https://github.com/tahminabithy/restaurant-website"
+      },
+      {
+        "name": "Dear Watch",
+        "description": "Dear Watch est un site de vente de montres où les utilisateurs peuvent parcourir différentes collections de montres, consulter les détails et effectuer des achats.",
+        "tools": [
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "MongoDB"
+        ],
+        "image": "https://i.ibb.co/0CfwF7T/Screenshot-2024-09-27-at-7-11-43-PM.png",
+        "liveLink": "https://dear-watch.web.app/",
+        "gitLink": "https://github.com/tahminabithy/Dear-watch"
+      },
+      {
+        "name": "Core Health Wellness Center",
+        "description": "Un outil de gestion de tâches qui permet aux utilisateurs de créer, mettre à jour et supprimer des tâches avec différents statuts.",
+        "tools": [
+          "React",
+          "Firebase",
+          "Tailwind CSS",
+          "Node.js"
+        ],
+        "image": "https://i.ibb.co/J5F7n85/Screenshot-2024-09-27-at-7-20-35-PM.png",
+        "liveLink": "https://core-health-and-wellness.web.app/",
+        "gitLink": "https://github.com/tahminabithy/core-health-wellness-center"
+      }
+    ]
+  },
+  "educations": {
+    "title": "Éducation",
+    "education": [
+      {
+        "yearRange": "2016-2021",
+        "degree": "Licence en Sciences",
+        "institution": "Université Brac"
+      },
+      {
+        "yearRange": "2013-2016",
+        "degree": "Certificat d'Enseignement Secondaire Supérieur",
+        "institution": "Collège Shaheed Bir Uttam Lt. Anwar Girls"
+      },
+      {
+        "yearRange": "2007-2013",
+        "degree": "Certificat d'Enseignement Secondaire",
+        "institution": "École et Collège de l'Aviation Civile"
+      }
+    ]
+  }
+}

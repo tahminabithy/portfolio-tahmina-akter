@@ -3,8 +3,10 @@ import Heading from '../../../Components/Heading/Heading';
 import './Skills.css'
 import img from '../../../assets/skilss/react.svg'
 import Marquee from 'react-fast-marquee';
+import { useTranslation } from 'react-i18next';
 export default function Skills() {
     const [skills, setSkills] = useState([]);
+    const [t] = useTranslation()
     // List of skills
     const skills1 = ["React", "JavaScript", "HTML", "CSS", "Tailwind", "Node.js"];
     const times = 4; // Number of times to repeat the skills
@@ -18,7 +20,7 @@ export default function Skills() {
     return (
         <div className='mt-12 md:mt-20'>
             <div className='text-center'>
-                <Heading title='I Work With...' />
+                <Heading title={t('skill-title')} />
             </div>
 
             {/* infinite loop slider */}

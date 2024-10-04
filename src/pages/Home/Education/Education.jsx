@@ -2,23 +2,23 @@ import React, { useEffect, useState } from 'react'
 import Heading from '../../../Components/Heading/Heading'
 import img from '../../../assets/skilss/eduBlue.svg'
 import { FaGraduationCap } from 'react-icons/fa'
+import { useTranslation } from 'react-i18next'
 export default function Education() {
-    const [education, setEducation] = useState([]);
-    useEffect(() => {
-        fetch('/education.json').then(res => res.json()).then(data => {
-            console.log(data)
-            setEducation(data)
-        })
-    }, [])
+    const [t] = useTranslation();
+    const education = t('educations.education', { returnObjects: true })
     return (
         <section className=''>
             {/* <div className='md:text-end'>
                 <Heading title='Education' />
             </div> */}
-            <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
+            <div className='grid grid-cols-1 lg:grid-cols-2 '>
+                {/* Image */}
+                <div className='flex justify-center items-center'>
+                    <img src={img} alt="Education illustration" className='rounded-lg shadow-lg' />
+                </div>
 
                 {/* Education List */}
-                <div className='py-4 px-4'>
+                <div className=''>
                     {education.map((edu, index) => (
                         <div
                             key={index}
@@ -45,10 +45,7 @@ export default function Education() {
                     ))}
                 </div>
 
-                {/* Image */}
-                <div className='flex justify-center items-center'>
-                    <img src={img} alt="Education illustration" className='rounded-lg shadow-lg' />
-                </div>
+
             </div>
         </section>
     )
