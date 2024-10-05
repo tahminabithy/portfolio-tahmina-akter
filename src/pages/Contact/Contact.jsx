@@ -27,13 +27,19 @@ export default function Contact() {
                 },
                 (error) => {
                     console.error('Email Sending Failed', error);
-                    alert('Email Sending Failed');
+                    Swal.fire({
+                        position: "top-end",
+                        icon: "error",
+                        title: 'Email Sending Failed',
+                        showConfirmButton: false,
+                        timer: 1500
+                    });
                 }
             );
     };
 
     return (
-        <div className='px-4 md:px-14 lg:px-24 my-4 md:my-12'>
+        <div className='px-4 md:px-14 lg:px-24 my-4 md:my-12 animate-fadeIn'>
             <div className='text-center'>
                 <Heading title={t('Contact.title')} />
             </div>
