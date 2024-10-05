@@ -72,7 +72,7 @@ const About = () => {
             {/* Experience  */}
 
             {/* hobbies  */}
-            <section className='py-12'>
+            <section className='py-12 animate-fadeIn'>
                 <h2 className='text-3xl font-semibold my-4 text-center dark:text-white'>{t('hobbies.title')}</h2>
                 <p className='text-center text-sm tracking-widest leading-relaxed'>"{t('hobbies.description')}"
                 </p>

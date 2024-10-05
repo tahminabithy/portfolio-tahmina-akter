@@ -7,6 +7,23 @@
   "skill-title": "I Work With...",
   "copyright": "copyright",
   "footer-text": "All rights reserved by Tahmina Akter",
+  "Contact": {
+    "title": "Let's Get In Touch",
+    "description": "Currently, I'm looking for any new opportunities. My inbox is always open.",
+    "send-email": " Whether you have a question or just want to say hi, I’ll try my best to get back to you!",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "placeholder-message": "Write your message here...",
+    "send-btn": "Send Message",
+    "alert-text": "Thank you for your message. I will get back to you soon."
+  },
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
   "about": {
     "title": "About Me",
     "description": "I am a passionate web developer with a strong interest in building responsive, user-friendly websites.",

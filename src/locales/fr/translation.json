@@ -7,6 +7,23 @@
   "skill-title": "Je travaille avec...",
   "copyright": "droit d'auteur",
   "footer-text": "Tous droits réservés par Tahmina Akter",
+  "Contact": {
+    "title": "Prenons Contact",
+    "description": "Actuellement, je suis à la recherche de nouvelles opportunités. Ma boîte de réception est toujours ouverte.",
+    "send-email": "Que vous ayez une question ou que vous souhaitiez simplement vous dire bonjour, je ferai de mon mieux pour vous répondre !",
+    "name": "Nom",
+    "email": "E-mail",
+    "message": "Message",
+    "placeholder-message": "Écrivez votre message ici...",
+    "send-btn": "Envoyer le message",
+    "alert-text": "Merci pour votre message. Je vous répondrai bientôt."
+  },
+  "navigation": {
+    "home": "Accueil",
+    "about": "À propos",
+    "projects": "Projets",
+    "contact": "Contacter"
+  },
   "about": {
     "title": "À propos de moi",
     "description": "Je suis un développeur Web passionné avec un fort intérêt pour la création de sites Web réactifs et conviviaux. es frameworks modernes.",

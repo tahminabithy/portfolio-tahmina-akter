@@ -2,8 +2,10 @@ import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { FaMoon, FaSun } from 'react-icons/fa'
 import './Navigation.css'
+import { useTranslation } from 'react-i18next'
 
 export default function Navigation() {
+    const [t] = useTranslation();
     const [theme, setTheme] = useState(localStorage.getItem('theme') ? localStorage.getItem('theme') : 'dark')
     const handleToggle = (e) => {
         if (e.target.checked) {
@@ -34,10 +36,10 @@ export default function Navigation() {
     }, [theme]);
     const navOptions = (
         <>
-            <li className='hover: active:bg-violet-700 focus:outline-none'><Link to="/">Home</Link></li>
-            <li ><Link to="/projects">Projects</Link></li>
-            <li><Link to="/about">About</Link></li>
-            <li><Link to="/contact">Contact</Link></li>
+            <li className='hover: active:bg-violet-700 focus:outline-none'><Link to="/">{t('navigation.home')}</Link></li>
+            <li ><Link to="/projects">{t('navigation.projects')}</Link></li>
+            <li><Link to="/about">{t('navigation.about')}</Link></li>
+            <li><Link to="/contact">{t('navigation.contact')}</Link></li>
             <li><label className="swap swap-rotate">
                 {/* this hidden checkbox controls the state */}
                 <input onChange={handleToggle} checked={theme === "dark" ? false : true} type="checkbox" />
@@ -73,7 +75,7 @@ export default function Navigation() {
                     <ul
                         tabIndex={0}
 
-                        className="menu menu-sm dropdown-content bg-base-100  z-[1] mt-3 w-96 p-2 shadow transform transition-all duration-300 ease-in-out scale-95 opacity-0 lg:scale-100 lg:opacity-100">
+                        className=" menu menu-sm dropdown-content bg-base-100  z-[1] mt-3 w-96 p-2 shadow transform transition-all duration-300 ease-in-out scale-95 opacity-0 lg:scale-100 lg:opacity-100">
                         {navOptions}
                     </ul>
                 </div>

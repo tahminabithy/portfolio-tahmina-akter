@@ -1,29 +1,31 @@
-import React from 'react'
+import React, { useState } from 'react'
 import profile from '../../../assets/profile2.jpg'
 import { useTranslation } from 'react-i18next';
 import i18n from '../../../i18n';
-
+import { Link } from 'react-router-dom';
+// import cv from '../../../assets/Tahmina_Akter_CV.pdf';
 export default function Banner() {
     const { t } = useTranslation();
-
+    const [selectedLanguage, setSelectedLanguage] = useState(i18n.language);
     const changeLanguage = (lang) => {
         i18n.changeLanguage(lang);
+        setSelectedLanguage(lang);
     };
     return (
         <div className='min-h-full flex items-center justify-center bg-lightColor dark:bg-skillColor'>
             <div className='text-center py-16 lg:py-32'>
 
                 {/* Image Section */}
-                <div className='relative flex justify-center mb-8 animate-fadeIn'>
+                <div className='flex justify-center mb-8 '>
                     <img
-                        className='h-72 w-72 object-cover rounded-full shadow-custom-shadow transition-transform duration-500 ease-in-out transform hover:scale-110 hover:shadow-xl'
+                        className='h-72 w-72 object-cover rounded-full shadow-custom-shadow transition-transform duration-500 ease-in-out transform hover:scale-110 hover:shadow-xl inset-0 bg-gradient-to-b from-transparent to-baseColor  rounded-full p-4'
                         src={profile} alt="Profile"
                     />
-                    <div className='absolute inset-0 bg-gradient-to-b from-transparent to-baseColor opacity-50 rounded-full'></div>
+                    {/* <div className='absolute inset-0 bg-gradient-to-b from-transparent to-baseColor opacity-50 rounded-full'></div> */}
                 </div>
 
                 {/* Text Section */}
-                <h1 className='text-5xl md:text-7xl font-extrabold tracking-widest text-gray-900 dark:text-white mt-12 md:mt-24 mb-8 animate-fadeIn'>
+                <h1 className='text-5xl md:text-7xl font-extrabold tracking-wider text-gray-900 dark:text-white mt-12 md:mt-24 mb-8 animate-fadeIn'>
                     {t('greeting')}
                 </h1>
                 <p className='text-2xl md:text-3xl text-baseColor font-semibold tracking-wide mb-4 animate-fadeIn delay-500'>
@@ -35,19 +37,24 @@ export default function Banner() {
 
                 {/* Buttons Section */}
                 <div className='flex flex-col md:flex-row justify-center items-center gap-6 mt-12 animate-fadeIn delay-1000'>
-                    <button className='border-2 border-baseColor text-baseColor py-3 px-8 rounded-md hover:bg-baseColor hover:text-white transition duration-300 ease-in-out shadow-md'>
-                        {t('getInTouch')}
-                    </button>
-                    <button className='bg-baseColor text-white py-3 px-8 rounded-md border-2 border-baseColor hover:bg-white hover:text-baseColor transition duration-300 ease-in-out shadow-md'>
-                        {t('downloadResume')}
-                    </button>
+                    <Link to="/contact">
+                        <button className='border-2 border-baseColor text-baseColor py-3 px-8 rounded-md hover:bg-baseColor hover:text-white transition duration-300 ease-in-out shadow-md'>
+                            {t('getInTouch')}
+                        </button>
+                    </Link>
+                    <a href='/Tahmina_Akter_CV.pdf' download="Tahmina_Akter_CV.pdf">
+                        <button className='bg-baseColor text-white py-3 px-8 rounded-md border-2 border-baseColor hover:bg-white hover:text-baseColor transition duration-300 ease-in-out shadow-md'>
+                            {t('downloadResume')}
+                        </button>
+                    </a>
+
                 </div>
                 <div className='mt-6 md:mt-20'>
-                    <button onClick={() => changeLanguage('en')} className="mr-2">
-                        <img className='w-12 h-6 object-cover' src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Flag_of_the_United_Kingdom_%281-2%29.svg" alt="English" />
+                    <button onClick={() => changeLanguage('en')} className={`mr-4 ${selectedLanguage === 'en' ? 'shadow-md' : 'opacity-40'}`}>
+                        <img className='w-8 h-4 md:w-12 md:h-6 object-cover' src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Flag_of_the_United_Kingdom_%281-2%29.svg" alt="English" />
                     </button>
-                    <button onClick={() => changeLanguage('fr')}>
-                        <img className='w-12 h-6 object-cover ml-4' src="https://m.media-amazon.com/images/I/51KX3rkD-LL._AC_UF894,1000_QL80_.jpg" alt="french" />
+                    <button onClick={() => changeLanguage('fr')} className={`${selectedLanguage === "fr" ? 'shadow-md' : 'opacity-40'}`}>
+                        <img className='w-8 h-4 md:w-12 md:h-6 object-cover' src="https://m.media-amazon.com/images/I/51KX3rkD-LL._AC_UF894,1000_QL80_.jpg" alt="french" />
                     </button>
                 </div>
             </div>
