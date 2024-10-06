@@ -12,7 +12,7 @@ export default function Contact() {
 
     const onSubmit = (data) => {
         console.log(data);
-        emailjs.sendForm('service_hivif29', 'template_1pvusql', form.current, 'yDE9nqaxUAQluqg5Q')
+        emailjs.sendForm(import.meta.env.VITE_EMAILJS_SERVICE_ID, import.meta.env.VITE_EMAILJS_TEMPLATE_ID, form.current, import.meta.env.VITE_EMAILJS_PUBLIC_KEY)
             .then(
                 () => {
                     Swal.fire({
