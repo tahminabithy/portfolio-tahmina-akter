@@ -55,7 +55,7 @@ export default function Navigation() {
         </>
     )
     return (
-        <div className="navbar py-4 md:py-10 px-4 md:px-14 lg:px-24">
+        <div className="navbar py-4  px-4 md:px-14 lg:px-24">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">

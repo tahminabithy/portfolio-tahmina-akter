@@ -12,8 +12,8 @@ export default function Banner() {
         setSelectedLanguage(lang);
     };
     return (
-        <div className='min-h-full flex items-center justify-center bg-lightColor dark:bg-skillColor'>
-            <div className='text-center py-16 lg:py-32'>
+        <div className=' flex items-center justify-center bg-lightColor dark:bg-skillColor'>
+            <div className='text-center py-10'>
 
                 {/* Image Section */}
                 <div className='flex justify-center mb-8 '>
@@ -25,7 +25,7 @@ export default function Banner() {
                 </div>
 
                 {/* Text Section */}
-                <h1 className='text-5xl md:text-7xl font-extrabold tracking-wider text-gray-900 dark:text-white mt-12 md:mt-24 mb-8 animate-fadeIn'>
+                <h1 className='text-4xl md:text-5xl font-extrabold tracking-wider text-gray-900 dark:text-white mt-4  mb-4 animate-fadeIn'>
                     {t('greeting')}
                 </h1>
                 <p className='text-2xl md:text-3xl text-baseColor font-semibold tracking-wide mb-4 animate-fadeIn delay-500'>
@@ -36,7 +36,7 @@ export default function Banner() {
                 </p>
 
                 {/* Buttons Section */}
-                <div className='flex flex-col md:flex-row justify-center items-center gap-6 mt-12 animate-fadeIn delay-1000'>
+                <div className='flex flex-col md:flex-row justify-center items-center gap-6 mt-4 animate-fadeIn delay-1000'>
                     <Link to="/contact">
                         <button className='border-2 border-baseColor text-baseColor py-3 px-8 rounded-md hover:bg-baseColor hover:text-white transition duration-300 ease-in-out shadow-md'>
                             {t('getInTouch')}
@@ -49,7 +49,7 @@ export default function Banner() {
                     </a>
 
                 </div>
-                <div className='mt-6 md:mt-20'>
+                <div className='mt-8 '>
                     <button onClick={() => changeLanguage('en')} className={`mr-4 ${selectedLanguage === 'en' ? 'shadow-md' : 'opacity-40'}`}>
                         <img className='w-8 h-4 md:w-12 md:h-6 object-cover' src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Flag_of_the_United_Kingdom_%281-2%29.svg" alt="English" />
                     </button>
