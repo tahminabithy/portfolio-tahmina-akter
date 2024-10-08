@@ -13,8 +13,9 @@ export default function Home() {
 
     return (
         <div className=''>
+
             <Banner />
-            <Experience />
+
             <Skills />
 
             {/* ---------projects ------------ */}
@@ -40,7 +41,7 @@ export default function Home() {
                 </Link>
             </section>
             {/* -------------project end ------------ */}
-
+            <Experience />
             {/* <p>contact</p>
             <p>textomonial</p> */}
 

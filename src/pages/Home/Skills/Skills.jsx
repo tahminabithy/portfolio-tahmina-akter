@@ -18,7 +18,7 @@ export default function Skills() {
         })
     }, [])
     return (
-        <div className='mt-12 md:mt-20'>
+        <div className='mt-12 md:mt-20 max-w-screen-2xl mx-auto'>
             <div className='text-center'>
                 <Heading title={t('skill-title')} />
             </div>
@@ -28,8 +28,8 @@ export default function Skills() {
                 <Marquee className='py-12' pauseOnHover={true} speed={70}>
                     {
                         skills.map((skill, index) => (
-                            <div key={index} className='overflow-hidden flex justify-center items-center bg-lightColor dark:bg-skillColor mx-8 shadow-2xl shadow-custom-shadow rounded-2xl w-52 p-2 transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110  duration-300'>
-                                <div className='px-10 py-8 transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110  duration-300'> {/* Increase padding */}
+                            <div key={index} className='overflow-hidden flex justify-center items-center bg-lightColor dark:bg-skillColor mx-8 shadow-2xl shadow-custom-shadow rounded-2xl min-w-[150px] sm:min-w-[180px] md:min-w-[200px] p-2 transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110  duration-300'>
+                                <div className='px-10 py-8 transition ease-in-out delay-150'> {/* Increase padding */}
                                     <img className='h-20 w-20 object-contain' src={skill.image} alt={skill.name} />
                                     <p className='text-center text-xl font-bold mt-4 text-dark dark:text-white'>{skill.name}</p>
                                 </div>
@@ -44,26 +44,3 @@ export default function Skills() {
 
 
 
-
-// <div className="relative overflow-hidden h-12 md:h-16 lg:h-80 bg-pink-800"> {/* Adjust height for different screens */}
-// <div className="absolute flex whitespace-nowrap animate-marquee space-x-4 md:space-x-8 lg:space-x-12 bg-pink-600"> {/* Control spacing between items */}
-//     {skills.map((skill, index) => (
-//         <div
-//             key={index}
-//             className="shadow-lg bg-black-700"
-//         >
-//             {skill}
-//         </div>
-//     ))}
-//     {/** Duplicate the skills for seamless effect */}
-//     {skills.map((skill, index) => (
-//         <div
-//             key={index + skills.length}
-//             className="mx-2 h-20  sm:mx-4 text-sm sm:text-base md:text-xl font-semibold text-white bg-blue-500 px-2 sm:px-4 py-1 sm:py-2 rounded-md shadow-md"
-//         >
-//             {skill}
-//             <img src={img} alt="" />
-//         </div>
-//     ))}
-// </div>
-// </div>

@@ -1,7 +1,6 @@
 {
   "name": "tahmina-react-portfolio",
   "private": true,
-  "homepage": "https://tahminabithy.github.io/",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
@@ -9,9 +8,7 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "i18n:extract": "i18next-scanner --config i18next-scanner.config.cjs",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "i18n:extract": "i18next-scanner --config i18next-scanner.config.cjs"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",

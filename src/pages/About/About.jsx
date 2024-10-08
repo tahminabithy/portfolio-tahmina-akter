@@ -7,6 +7,7 @@ import img2 from '../../assets/hobbies/img2.png'
 import img3 from '../../assets/hobbies/img3.png'
 import img4 from '../../assets/hobbies/img4.png'
 import { useTranslation } from 'react-i18next';
+import Navigation from '../../shared/Navigation/Navigation';
 const About = () => {
     const [t] = useTranslation();
     const skills = [
@@ -22,78 +23,82 @@ const About = () => {
     ]
 
     return (
-        <div className='animate-fadeIn px-4 md:px-14 lg:px-24'>
-            <div className='my-4 lg:my-12'>
-                <Heading title={t('about.title')} />
-            </div>
+        <section>
+            <Navigation />
+            <div className='animate-fadeIn px-4 container mx-auto'>
+                <div className='my-4 lg:my-12'>
+                    <Heading title={t('about.title')} />
+                </div>
 
-            <div className='grid grid-cols-1 md:grid-cols-2 gap-6 mb-8'>
-                <p className='mt-2 md:mt-12 leading-relaxed text-lg md:text-2xl tracking-widest dark:text-white'>
-                    {t('about.description')} <br /> <br /> {t('about.experience')}
-                </p>
+                <div className='grid grid-cols-1 md:grid-cols-2 gap-6 mb-8'>
+                    <p className='mt-2 md:mt-12 leading-relaxed text-lg md:text-xl tracking-widest dark:text-white'>
+                        {t('about.description')} <br /> <br /> {t('about.experience')}
+                    </p>
 
-                {/* Pie Chart */}
-                <div className='flex justify-center items-center'>
-                    <div className='flex flex-col md:flex-row gap-4 items-center'>
-                        <PieChart
-                            className='w-96'
-                            data={skills}
-                            lineWidth={60}
-                            totalValue={100}
-                            label={({ dataEntry }) => `${Math.round(dataEntry.value)}%`}
-                            labelStyle={{
-                                fontSize: '5px', // Reduced font size to prevent overflow
-                                fill: '#fff',
-                                fontWeight: 'bold',
+                    {/* Pie Chart */}
+                    <div className='flex justify-center items-center'>
+                        <div className='flex flex-col md:flex-row gap-4 items-center'>
+                            <PieChart
+                                className='w-96'
+                                data={skills}
+                                lineWidth={60}
+                                totalValue={100}
+                                label={({ dataEntry }) => `${Math.round(dataEntry.value)}%`}
+                                labelStyle={{
+                                    fontSize: '5px', // Reduced font size to prevent overflow
+                                    fill: '#fff',
+                                    fontWeight: 'bold',
 
-                            }}
-                            labelPosition={70} // Adjust label position
-                            animate={true}
-                            reveal={100}
-                        />
+                                }}
+                                labelPosition={70} // Adjust label position
+                                animate={true}
+                                reveal={100}
+                            />
 
-                        {/* Chart Labels */}
-                        <div className='flex flex-col mt-6'>
-                            {skills.map((skill, index) => (
-                                <div key={index} className='flex items-center mb-2'>
-                                    <span className={`h-4 w-4 mr-2`} style={{ backgroundColor: skill.color }}></span>
-                                    <span className='text-base'>{skill.title}</span>
-                                </div>
-                            ))}
+                            {/* Chart Labels */}
+                            <div className='flex flex-col mt-6'>
+                                {skills.map((skill, index) => (
+                                    <div key={index} className='flex items-center mb-2'>
+                                        <span className={`h-4 w-4 mr-2`} style={{ backgroundColor: skill.color }}></span>
+                                        <span className='text-base'>{skill.title}</span>
+                                    </div>
+                                ))}
+                            </div>
                         </div>
                     </div>
+
                 </div>
+                {/* education   */}
+                <h2 className='text-3xl font-semibold my-4 md:my-8 dark:text-white'>{t('educations.title')}</h2>
+                <Education />
+
+                {/* Experience  */}
+
+                {/* hobbies  */}
+                <section className='py-12 animate-fadeIn'>
+                    <h2 className='text-3xl font-semibold my-4 text-center dark:text-white'>{t('hobbies.title')}</h2>
+                    <p className='text-center text-sm tracking-widest leading-relaxed'>"{t('hobbies.description')}"
+                    </p>
+                    <div className='grid cols-1 md:grid-cols-3 lg:grid-cols-4 gap-12 lg:gap-20 my-6 md:my-24'>
+                        <div className='flex justify-center items-center bg-black dark:bg-white'>
+                            <img className='md:w-64  object-cover p-4 md:p-6' src={img1} alt="" />
+                        </div>
+                        <div className='flex justify-center items-center bg-black dark:bg-white'>
+                            <img className='md:w-64 object-cover p-4 md:p-6' src={img2} alt="" />
+                        </div>
+                        <div className='flex justify-center items-center bg-black dark:bg-white'>
+                            <img className='md:w-64 object-cover p-4 md:p-6' src={img3} alt="" />
+                        </div>
+                        <div className='flex justify-center items-center bg-black dark:bg-white'>
+                            <img className='md:w-64 object-cover p-4 md:p-6' src={img4} alt="" />
+                        </div>
+                    </div>
+                </section>
+
 
             </div>
-            {/* education   */}
-            <h2 className='text-3xl font-semibold my-4 md:my-8 dark:text-white'>{t('educations.title')}</h2>
-            <Education />
+        </section>
 
-            {/* Experience  */}
-
-            {/* hobbies  */}
-            <section className='py-12 animate-fadeIn'>
-                <h2 className='text-3xl font-semibold my-4 text-center dark:text-white'>{t('hobbies.title')}</h2>
-                <p className='text-center text-sm tracking-widest leading-relaxed'>"{t('hobbies.description')}"
-                </p>
-                <div className='grid cols-1 md:grid-cols-3 lg:grid-cols-4 gap-12 lg:gap-20 my-6 md:my-24'>
-                    <div className='flex justify-center items-center bg-black dark:bg-white'>
-                        <img className='object-cover p-4 md:p-6' src={img1} alt="" />
-                    </div>
-                    <div className='flex justify-center items-center bg-black dark:bg-white'>
-                        <img className='object-cover p-4 md:p-6' src={img2} alt="" />
-                    </div>
-                    <div className='flex justify-center items-center bg-black dark:bg-white'>
-                        <img className='object-cover p-4 md:p-6' src={img3} alt="" />
-                    </div>
-                    <div className='flex justify-center items-center bg-black dark:bg-white'>
-                        <img className='object-cover p-4 md:p-6' src={img4} alt="" />
-                    </div>
-                </div>
-            </section>
-
-
-        </div>
     );
 };
 

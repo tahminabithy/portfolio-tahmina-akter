@@ -3,9 +3,17 @@ import { Link } from 'react-router-dom'
 import { FaMoon, FaSun } from 'react-icons/fa'
 import './Navigation.css'
 import { useTranslation } from 'react-i18next'
+import i18n from '../../i18n'
 
 export default function Navigation() {
     const [t] = useTranslation();
+    const { i18n } = useTranslation();
+    const [selectedLanguage, setSelectedLanguage] = useState(i18n.language);
+
+    const changeLanguage = (lang) => {
+        i18n.changeLanguage(lang);
+        setSelectedLanguage(lang);
+    };
     const [theme, setTheme] = useState(localStorage.getItem('theme') ? localStorage.getItem('theme') : 'dark')
     const handleToggle = (e) => {
         if (e.target.checked) {
@@ -15,11 +23,7 @@ export default function Navigation() {
             setTheme('dark')
         }
     }
-    // useEffect(() => {
-    //     localStorage.setItem('theme', theme)
-    //     const localTheme = localStorage.getItem('theme');
-    //     document.querySelector('html').setAttribute('data-theme', localTheme);
-    // }, [theme])
+
     useEffect(() => {
         localStorage.setItem('theme', theme);
         const localTheme = localStorage.getItem('theme');
@@ -36,26 +40,35 @@ export default function Navigation() {
     }, [theme]);
     const navOptions = (
         <>
-            <li className='hover: active:bg-violet-700 focus:outline-none'><Link to="/">{t('navigation.home')}</Link></li>
+            <li className=''><Link to="/">{t('navigation.home')}</Link></li>
             <li ><Link to="/projects">{t('navigation.projects')}</Link></li>
             <li><Link to="/about">{t('navigation.about')}</Link></li>
             <li><Link to="/contact">{t('navigation.contact')}</Link></li>
-            <li><label className="swap swap-rotate">
-                {/* this hidden checkbox controls the state */}
-                <input onChange={handleToggle} checked={theme === "dark" ? false : true} type="checkbox" />
 
-                {/* sun icon */}
-                <FaSun className="swap-off h-6 w-6 fill-current text-yellow-600" />
-                {/* moon icon */}
-                <FaMoon className="swap-on h-6 w-6 fill-current " />
+            <li>
+                <select
+                    value={selectedLanguage}
+                    onChange={(e) => changeLanguage(e.target.value)}
+                    className="bg-transparent border-none focus:outline-none cursor-pointer  rounded-md"
+                >
+                    <option value="en">🇬🇧 En</option>
+                    <option value="fr">🇫🇷 Fr</option>
+                </select>
+            </li>
+            <li className='text-start'>
+                <label className="swap swap-rotate">
+                    {/* this hidden checkbox controls the state */}
+                    <input onChange={handleToggle} checked={theme === "dark" ? false : true} type="checkbox" />
+                    <FaSun className="swap-off h-6 w-6 fill-current text-yellow-600" />
+                    <FaMoon className="swap-on h-6 w-6 fill-current " />
 
-            </label></li>
-
+                </label>
+            </li>
 
         </>
     )
     return (
-        <div className="navbar py-4  px-4 md:px-14 lg:px-24">
+        <div className="navbar py-4 px-4 md:px-14 lg:px-24">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -74,15 +87,15 @@ export default function Navigation() {
                     </div>
                     <ul
                         tabIndex={0}
-
-                        className=" menu menu-sm dropdown-content bg-base-100  z-[1] mt-3 w-96 p-2 shadow transform transition-all duration-300 ease-in-out scale-95 opacity-0 lg:scale-100 lg:opacity-100">
+                        className="flex justify-center items-center menu menu-sm dropdown-content bg-white dark:bg-gray-800 dark:text-white rounded-lg shadow-lg z-[1] mt-3 w-96 p-4 transition-all duration-300 ease-in-out transform scale-95 opacity-0 lg:scale-100 lg:opacity-100"
+                    >
                         {navOptions}
                     </ul>
                 </div>
-                <a className="btn btn-ghost text-4xl text-style text-baseColor">Tahmina Akter</a>
+                <Link to="/" className="btn btn-ghost text-4xl text-style text-baseColor">Tahmina Akter</Link>
             </div>
-            <div className="navbar-end hidden lg:flex">
-                <ul className="menu menu-horizontal  text-2xl lg:space-x-4">
+            <div className="navbar-end hidden lg:flex dark:text-white">
+                <ul className="menu menu-horizontal  text-xl lg:space-x-4">
                     {navOptions}
                 </ul>
             </div>

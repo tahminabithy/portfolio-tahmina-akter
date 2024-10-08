@@ -20,7 +20,7 @@ const Experience = () => {
     }
 
     return (
-        <section className="pb-10 py-8 md:py-12 bg-gray-900 lg:py-24">
+        <section className="pb-10 py-8 md:py-12 bg-slate-200 dark:bg-gray-900  lg:py-24">
             <div className="container mx-auto text-center">
                 <h1 className="text-4xl font-bold mb-6 md:mb-16 text-baseColor">{t('experience.title')}</h1>
 

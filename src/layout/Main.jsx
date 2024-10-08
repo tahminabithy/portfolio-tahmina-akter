@@ -7,9 +7,7 @@ export default function Main() {
 
     return (
         <div >
-            <Navigation />
             <Outlet />
-
             <Footer />
         </div>
     )
